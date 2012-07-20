@@ -1,0 +1,283 @@
+body {
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+    width: 400px;
+    height: 400px;
+    border: 1px solid #000000;
+    background-color: #000;
+}
+
+.ie {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+.ie a {
+    color: #fff;
+}
+
+
+/* Brand */
+.nm-brand {
+    z-index: 100;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-image: url(images/nm.png);
+    background-repeat: no-repeat;
+    height: 64px;
+    padding-left: 188px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 64px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* Impressum */
+.disclaimer {
+    z-index: 100;
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    height: 10px;
+    color: #555;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 10px;
+    font-size: 10px;
+}
+
+.disclaimer a {
+    color: #555;
+    text-decoration: none;
+}
+
+
+/* Center field as reference */
+.field {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    margin: 0px 0px 0px 0px;
+    top: 50%;
+    left: 50%;
+	z-index: 50;
+}
+
+/* Default star configuration */
+.star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin-left: 0px;       /* Centered */
+
+    background-color: #34214e; /* Make it invisible before start */
+    -moz-transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+    -o-transform: scale(0.0);
+
+    /** Setup basic animation config */
+    -moz-animation-name: starfloat; -o-animation-name: starfloat; -webkit-animation-name: starfloat;
+    -moz-animation-timing-function: ease-in; -o-animation-timing-function: ease-in; -webkit-animation-timing-function: ease-in;
+    -moz-animation-iteration-count: infinite; -o-animation-iteration-count: infinite; -webkit-animation-iteration-count: infinite;
+}
+
+
+/* Make it real. Start floating in many steps. */
+.delay-0 { -moz-animation-delay: 0.3s; -o-animation-delay: 0.3s; -webkit-animation-delay: 0.3s; }
+.delay-1 { -moz-animation-delay: 0.19s; -o-animation-delay: 0.19s; -webkit-animation-delay: 0.19s; }
+.delay-2 { -moz-animation-delay: 0.31s; -o-animation-delay: 0.31s; -webkit-animation-delay: 0.31s; }
+.delay-3 { -moz-animation-delay: 0.37s; -o-animation-delay: 0.37s; -webkit-animation-delay: 0.37s; }
+.delay-4 { -moz-animation-delay: 0.42s; -o-animation-delay: 0.42s; -webkit-animation-delay: 0.42s; }
+.delay-5 { -moz-animation-delay: 0.51s; -o-animation-delay: 0.51s; -webkit-animation-delay: 0.51s; }
+.delay-6 { -moz-animation-delay: 0.65s; -o-animation-delay: 0.65s; -webkit-animation-delay: 0.65s; }
+.delay-7 { -moz-animation-delay: 0.74s; -o-animation-delay: 0.74s; -webkit-animation-delay: 0.74s; }
+.delay-8 { -moz-animation-delay: 0.81s; -o-animation-delay: 0.81s; -webkit-animation-delay: 0.81s; }
+.delay-9 { -moz-animation-delay: 0.97s; -o-animation-delay: 0.97s; -webkit-animation-delay: 0.97s; }
+.delay-10 { -moz-animation-delay: 1.09s; -o-animation-delay: 1.09s; -webkit-animation-delay: 1.09s; }
+.delay-11 { -moz-animation-delay: 1.19s; -o-animation-delay: 1.19s; -webkit-animation-delay: 1.19s; }
+.delay-12 { -moz-animation-delay: 1.31s; -o-animation-delay: 1.31s; -webkit-animation-delay: 1.31s; }
+.delay-13 { -moz-animation-delay: 1.37s; -o-animation-delay: 1.37s; -webkit-animation-delay: 1.37s; }
+.delay-14 { -moz-animation-delay: 1.42s; -o-animation-delay: 1.42s; -webkit-animation-delay: 1.42s; }
+.delay-15 { -moz-animation-delay: 1.51s; -o-animation-delay: 1.51s; -webkit-animation-delay: 1.51s; }
+.delay-16 { -moz-animation-delay: 1.65s; -o-animation-delay: 1.65s; -webkit-animation-delay: 1.65s; }
+.delay-17 { -moz-animation-delay: 1.74s; -o-animation-delay: 1.74s; -webkit-animation-delay: 1.74s; }
+.delay-18 { -moz-animation-delay: 1.81s; -o-animation-delay: 1.81s; -webkit-animation-delay: 1.81s; }
+.delay-19 { -moz-animation-delay: 1.97s; -o-animation-delay: 1.97s; -webkit-animation-delay: 1.97s; }
+
+.delay-s10 { -moz-animation-delay: 10.97s; -o-animation-delay: 1.97s; -webkit-animation-delay: 1.97s; }
+.delay-s20 { -moz-animation-delay: 20.97s; -o-animation-delay: 1.97s; -webkit-animation-delay: 1.97s; }
+
+
+/* Near and far. Simulate the distance */
+.size-1 {   width: 10px;  height: 10px; -moz-animation-duration: 3s; -o-animation-duration: 3s; -webkit-animation-duration: 3s; }
+.size-2 {   width:  1px;  height:  1px; -moz-animation-duration: 10s; -o-animation-duration: 10s; -webkit-animation-duration: 10s; }
+.size-3 {   width:  9px;  height:  9px; -moz-animation-duration: 3.5s; -o-animation-duration: 3.5s; -webkit-animation-duration: 3.5s; }
+.size-4 {   width:  2px;  height:  2px; -moz-animation-duration: 9s; -o-animation-duration: 9s; -webkit-animation-duration: 9s; }
+.size-5 {   width:  8px;  height:  8px; -moz-animation-duration: 4s; -o-animation-duration: 4s; -webkit-animation-duration: 4s; }
+.size-6 {   width:  3px;  height:  3px; -moz-animation-duration: 8s; -o-animation-duration: 8s; -webkit-animation-duration: 8s; }
+.size-7 {   width:  7px;  height:  7px; -moz-animation-duration: 5s; -o-animation-duration: 5s; -webkit-animation-duration: 5s; }
+.size-8 {   width:  4px;  height:  4px; -moz-animation-duration: 7s; -o-animation-duration: 7s; -webkit-animation-duration: 7s; }
+.size-9 {   width:  5.5px;  height:  5.5px; -moz-animation-duration: 6s; -o-animation-duration: 6s; -webkit-animation-duration: 6s; }
+
+/* And warp. */
+@-moz-keyframes starfloat {
+    0%   { background-color: #34214e; -moz-transform: scale(0.2); margin-left: 60px; }
+    80%  { background-color: #eee; -moz-transform: scale(1); }
+    100% { background-color: #eee; -moz-transform: scale(1); margin-left: 1000px; }
+}
+
+@-o-keyframes starfloat {
+    0%   { background-color: #34214e; -o-transform: scale(0.2); margin-left: 0px; }
+    80%  { background-color: #eee; -o-transform: scale(1); }
+    100% { background-color: #eee; -o-transform: scale(1); margin-left: 1000px; }
+}
+
+@-webkit-keyframes starfloat {
+    0%   { background-color: #34214e; -webkit-transform: scale(0.2); margin-left: 0px; }
+    80%  { background-color: #eee; -webkit-transform: scale(1); }
+    100% { background-color: #eee; -webkit-transform: scale(1); margin-left: 1000px; }
+}
+
+/* Little description */
+
+.text {
+    position:absolute;
+    margin-top: -20px;
+    margin-left: -100px;
+    width: 200px;
+
+    color: #fff;
+    font-family: Tahoma;
+    font-size: 20pt;
+    text-align: center;
+
+    opacity: 0;
+    z-index: 1000;
+}
+
+.text1 {
+    -moz-animation: textfade 12s linear infinite;
+    -moz-animation-delay: 6s;
+    -webkit-animation: textfade 12s linear infinite;
+    -webkit-animation-delay: 6s;
+    -o-animation: textfade 12s linear infinite;
+    -o-animation-delay: 6s;
+}
+.text2 {
+    -moz-animation: textfade 12s linear infinite;
+    -webkit-animation: textfade 12s linear infinite;
+    -o-animation: textfade 12s linear infinite;
+}
+
+@-moz-keyframes textfade {
+   0% { opacity : 0; }
+   10% { opacity : 0.7; }
+   40% { opacity : 0.7; }
+   50% { opacity : 0; }
+}
+
+@-webkit-keyframes textfade {
+   0% { opacity : 0; }
+   10% { opacity : 0.7; }
+   40% { opacity : 0.7; }
+   50% { opacity : 0; }
+}
+
+@-o-keyframes textfade {
+   0% { opacity : 0; }
+   10% { opacity : 0.7; }
+   40% { opacity : 0.7; }
+   50% { opacity : 0; }
+}
+
+/** Lets create a real planet **/
+
+.planet {
+    z-index: 100;
+    -moz-transform: rotate(330deg);
+    -webkit-transform: rotate(330deg);
+    -o-transform: rotate(330deg);
+}
+
+.planet-rotate {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    border-radius:  100%; /* Make it round */
+
+    width: 400px;
+    height: 400px; /* Textures are 400px height */
+
+    overflow: hidden;
+
+    background-image: url(images/planet_quom.jpg);  /* Texture planet 1 */
+    background-repeat: repeat-x;
+
+    -moz-transform: rotate(8deg);
+    -moz-animation: planetrotate 80s ease-out infinite;
+    -webkit-transform: rotate(8deg);
+    -webkit-animation: planetrotate 80s ease-out infinite;
+    -o-transform: rotate(8deg);
+    -o-animation: planetrotate 80s ease-out infinite;
+    box-shadow: 0 0 15px #666;
+}
+
+.planet-move {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    -moz-transform: scale(0);
+    -moz-animation-name: planetmove;
+    -moz-animation-timing-function: ease-in;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-duration: 80s;
+
+    -webkit-transform: scale(0);
+    -webkit-animation-name: planetmove;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 80s;
+
+    -o-transform: scale(0);
+    -o-animation-name: planetmove;
+    -o-animation-timing-function: ease-in;
+    -o-animation-iteration-count: infinite;
+    -o-animation-duration: 80s;
+
+    z-index: 0;
+}
+
+@-moz-keyframes planetrotate {
+    0% { background-position: 0px }
+    100% { background-position: 800px }
+}
+@-webkit-keyframes planetrotate {
+    0% { background-position: 0px }
+    100% { background-position: 800px }
+}
+
+@-o-keyframes planetrotate {
+    0% { background-position: 0px }
+    100% { background-position: 800px }
+}
+
+@-moz-keyframes planetmove {
+    0%   { margin-left: 40px;   -moz-transform: rotate(22deg) scale(0); }
+    100% { margin-left: 1300px; -moz-transform: rotate(15deg) scale(1); }
+}
+
+@-webkit-keyframes planetmove {
+    0%   { margin-left: 40px;   -webkit-transform: rotate(22deg) scale(0); }
+    100% { margin-left: 1300px; -webkit-transform: rotate(15deg) scale(1); }
+}
+
+@-o-keyframes planetmove {
+    0%   { margin-left: 40px;   -o-transform: rotate(22deg) scale(0); }
+    100% { margin-left: 1300px; -o-transform: rotate(15deg) scale(1); }
+}
+
